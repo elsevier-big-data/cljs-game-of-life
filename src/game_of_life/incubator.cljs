@@ -56,7 +56,7 @@
       :reagent-render
       (fn [properties f-draw]
         (if-let [node @dom-node] (f-draw (.-firstChild node)))
-        [:div [:canvas (if-let [node @dom-node] properties)]])})))
+        [:div [:canvas properties]])})))
 
 (defn view [params]
   [:div {:style {:padding "5px"}}
